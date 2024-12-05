@@ -1,0 +1,1196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  height: 100vh;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+#mediaForPotrait {
+  display: none;
+}
+
+#wholePage {
+  height: 100vh;
+  background: linear-gradient(210deg, #93bae8, #edadc9, #b8b5db);
+  background-size: 350% 550%;
+  position: relative;
+}
+
+#allItems1 {
+  height: 100vh;
+}
+
+#wholePage2 {
+  height: 100vh;
+  background: linear-gradient(240deg, #1eae98, #d8b5ff);
+  background-size: 350% 550%;
+  position: relative;
+}
+
+.mainDrop {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(210deg, #93bae8, #edadc9, #b8b5db);
+  background-size: 350% 550%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.portfolioDrop {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(240deg, #1eae98, #d8b5ff);
+  background-size: 350% 550%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.projectsDrop {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
+  background-size: 100% 100%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+#wholePage3 {
+  background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
+  background-size: 100% 100%;
+}
+
+&::-webkit-scrollbar {
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7685;
+}
+
+.scrollContainer {
+  position: relative;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  width: 100%;
+  -ms-text-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.full-screen-section {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+.full-screen-section2 {
+  width: 100%;
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+#mainLogoSVG {
+  height: 75%;
+  width: 75%;
+  animation: fadeOutLogo 4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#menuLogo {
+  cursor: pointer;
+}
+
+#menuLogo:hover .cls-2 {
+  fill-opacity: 0;
+  stroke-dasharray: 1500;
+  fill: #ffffff;
+  stroke: #ffffff;
+  animation: mainLogoSVG2 1.5s ease-in-out, colorSVg 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.cls-2 {
+  fill: #ffffff;
+  fill-opacity: 0;
+  stroke: #ffffff;
+  stroke-width: 0.5px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1000;
+  animation: mainLogoSVG 5s ease-in-out, colorSVg 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#pageElements {
+  animation: fadeIn 1.5s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.elementHeight {
+  height: 100vh;
+}
+
+.scrollHeight {
+  height: 10vh;
+}
+
+#downIcon {
+  height: 30%;
+  width: auto;
+  fill: white;
+}
+
+#downIcon1 {
+  height: 30%;
+  width: auto;
+  fill: white;
+}
+
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.backdrop.closing {
+  opacity: 0;
+}
+
+.cls-1 {
+  fill: #fff;
+  fill-opacity: 0;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1000;
+  animation: mainLogoSVG 5s ease-in-out, colorSVg 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.sidebarAni {
+  z-index: 110;
+  animation: sidebarAni 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.sideElementAni {
+  transition: 0.2s ease-in-out;
+}
+
+.hideSIde {
+  animation: hideSide 1s ease-in-out forwards;
+}
+
+.underline1 {
+  width: 0px;
+  height: 3px;
+  background-color: #000000;
+  z-index: 50;
+}
+
+#sideBox .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sideBox .btn button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: rgba(65, 65, 65, 0.01);
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(0px);
+  user-select: none;
+}
+
+#sideBox .btn:hover button {
+  letter-spacing: 2px;
+  color: #1a1a1a;
+}
+
+#sideBox .btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1.5), transparent);
+  transform: skewX(0deg) translate(0);
+  transition: 0.5s;
+  filter: blur(5px);
+}
+
+#sideBox .btn:hover button::before {
+  transform: skewX(0deg) translate(400px);
+}
+
+#sideBox .btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 50%;
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  transition: 0.1s;
+  transition-delay: 0.5;
+}
+
+#sideBox .btn:hover::before /*redBlack them width 85%*/ {
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#sideBox .btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: 50%;
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  transition: 0.1s;
+  transition-delay: 0.4;
+}
+
+#sideBox .btn:hover::after /*redBlack them width 85%*/ {
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#sideBox .btn::before, /*chnage 1*/
+#sideBox .btn::after {
+  background: #f3f3f3;
+  box-shadow: 0 0 7px #f3f3f3, 0 0 7px #f3f3f3, 0 0 7px #f3f3f3, 0 0 7px #f3f3f3;
+}
+
+.sideElementAni:hover .underline1 {
+  animation: underline1 0.5s ease-in-out forwards;
+}
+
+#closeSVG {
+  height: 55%;
+  cursor: pointer;
+}
+
+#close:hover #closeSVG {
+  animation: scale 0.25s ease-in-out forwards;
+}
+
+#close:not(:hover) #closeSVG {
+  animation: scale-out 0.25s ease-in-out forwards;
+}
+
+.cls-3 {
+  fill: #fff;
+}
+
+.closing {
+  animation: sidebarAniClose 0.7s ease-in-out forwards;
+}
+
+.closing2 {
+  animation: fadeOut 0.7s ease-in-out forwards;
+}
+
+.colorChangeToPortfolio {
+  animation: colorChangeToPortfolio 0.7s ease-in-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+#aboutMeBox {
+  height: 75%;
+  width: 65%;
+  border-radius: 60px;
+  border: solid white 2px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 40px;
+  word-spacing: 1px;
+  transition: 0.7s;
+}
+
+#aboutMeTextInside::-webkit-scrollbar {
+  width: 12px;
+}
+
+#lookingForBox {
+  height: 90%;
+  width: 75%;
+  border-radius: 60px;
+  border: solid white 2px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 28px;
+  padding-top: 38px;
+  word-spacing: 1px;
+}
+
+#skillTextBox {
+  height: 25%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#skillLine1 {
+  width: 25%;
+  height: 3px;
+  background: linear-gradient(90deg, white, transparent);
+}
+
+#skillBox {
+  height: 75%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 15px;
+}
+
+.gridItem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 30px;
+  gap: 6px;
+}
+
+#skillBox2Top {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skillBox2Text {
+  height: 65%;
+  width: 75%;
+  border-radius: 60px;
+  border: solid white 2px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 28px;
+  padding-top: 38px;
+  word-spacing: 1px;
+}
+
+#skillBox2Bottom {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills2items {
+  height: 100%;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#socialLine {
+  width: 50%;
+  height: 4px;
+  background: radial-gradient(white, transparent);
+}
+
+.fontSizePages {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+#elemetsPage li {
+  margin-bottom: 5px;
+}
+
+#elemetsPage2 li {
+  margin-bottom: 5px;
+}
+
+#emailtextSocialMobile {
+  display: none;
+}
+
+#portfolioTextBox {
+  height: 75%;
+  width: 75%;
+  border-radius: 60px;
+  border: solid white 2px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 28px;
+  padding-top: 38px;
+  word-spacing: 1px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+#portfolioHeadingBottom {
+}
+
+#portfolioHeadingLine {
+  width: 35%;
+  height: 2px;
+  background: radial-gradient(white, transparent);
+}
+
+.iconSize2 {
+  height: 40%;
+  width: 80%;
+}
+
+#projectBoxTop {
+  height: 90%;
+  width: 100%;
+  display: flex;
+}
+
+#leftBoxTop {
+  width: 50%;
+  height: 100%;
+}
+
+#leftBoxTopUpper {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+#leftBoxTopLower {
+  width: 100%;
+  height: 10%;
+}
+
+#rightBoxTop {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxImage {
+  border: 2px solid white;
+  width: 85%;
+  height: 85%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.boxImage img {
+  width: 100%; /* Ensures image fits within grid item horizontally */
+  height: 100%; /* Ensures image fits within grid item vertically */
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  #sidebar {
+    width: 50%;
+  }
+  #sideBox {
+    font-size: 40px;
+  }
+  .sidebarAni {
+    z-index: 110;
+    animation: sidebarAniPhone 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  #welcomePage {
+    text-align: center;
+    font-size: 50px;
+  }
+  #downIcon {
+    height: 60%;
+  }
+  #aboutMeBox {
+    height: 85%;
+    width: 85%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 30px;
+    word-spacing: 1px;
+  }
+  #aboutMeTopText {
+    justify-content: center;
+  }
+  #aboutMeTextInside {
+    font-size: 20px;
+    overflow-y: scroll;
+  }
+  #readMoreButton {
+    display: none;
+  }
+  .scrollButton {
+    display: none;
+  }
+  #lookingForTextTop {
+    font-size: 34px;
+  }
+  #lookingForBox {
+    height: 90%;
+    width: 100%;
+    border-radius: 35px;
+    overflow-y: scroll;
+    padding: 28px;
+    padding-top: 38px;
+    padding-bottom: 36px;
+    word-spacing: 1px;
+  }
+  #lookingForTextBottom {
+    font-size: 20px;
+  }
+  #skillLine1 {
+    width: 80%;
+  }
+  #skillsTextTop1 {
+    font-size: 70px;
+  }
+  #skillBox {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0px;
+  }
+  .gridItem {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 5px;
+    text-align: center;
+  }
+  #skillBox2Top {
+    align-items: end;
+  }
+  #skillBox2Text {
+    height: 75%;
+    width: 90%;
+    font-size: 20px;
+    overflow-y: scroll;
+  }
+  #skills2items {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .itm2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  #topSocial {
+    font-size: 60px;
+  }
+  #socialLine {
+    width: 85%;
+  }
+  #bottomSocial {
+    font-size: 35px;
+  }
+  #emailtextSocial {
+    display: none;
+  }
+  #clickToCopyText {
+    font-size: 20px;
+  }
+  #emailtextSocialMobile {
+    display: flex;
+    font-size: 25px;
+  }
+  #middleSocial {
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  #socialMiddleAll {
+    gap: 10px;
+  }
+  #boxForSocial {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+  }
+  #topSocial {
+    height: 25%;
+  }
+  #thankYouText {
+    font-size: 50px;
+    text-align: center;
+  }
+  #pageContent {
+    display: none;
+  }
+
+  #welcomePagePortfolio {
+    font-size: 50px;
+  }
+  #goDownButton {
+    display: none;
+  }
+  #portfolioTextBox {
+    height: 90%;
+    width: 90%;
+    font-size: 18px;
+    overflow-y: scroll;
+  }
+  #PortTextBox {
+    height: 30%;
+  }
+  #portfolioHeadingBottom {
+    font-size: 60px;
+  }
+  #portfolioHeadingLine {
+    width: 80%;
+  }
+  .iconSize2 {
+    height: 40%;
+    width: 60%;
+  }
+  #portLetter {
+    font-size: 30px;
+  }
+  #menuLogo {
+    height: 80%;
+  }
+  #logoBox {
+    padding: 15px;
+    padding-top: 20px;
+  }
+
+  #welcomePageProjects {
+    font-size: 50px;
+  }
+  #projectBoxTop {
+    flex-direction: column;
+  }
+  #leftBoxTop {
+    width: 100%;
+    height: 70%;
+  }
+  #leftBoxTop p {
+    overflow: scroll;
+    font-size: 20px;
+  }
+  #leftBoxTopLower {
+    margin-top: 15px;
+    text-align: center;
+  }
+  #rightBoxTop {
+    margin-top: 20px;
+    width: 100%;
+  }
+  #fillElement {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-device-height: 480px) and (orientation: landscape) {
+  #mediaForPotrait {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-weight: 300;
+  }
+  #allItems1 {
+    display: none;
+  }
+  #allItems2 {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #sidebar {
+    width: 50%;
+  }
+  .sidebarAni {
+    z-index: 110;
+    animation: sidebarAniPhone 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  #welcomePage {
+    text-align: center;
+    font-size: 60px;
+  }
+  #downIcon {
+    height: 60%;
+  }
+  #aboutMeBox {
+    height: 85%;
+    width: 85%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 30px;
+    word-spacing: 1px;
+  }
+  #aboutMeTopText {
+    justify-content: center;
+  }
+  #aboutMeTextInside {
+    font-size: 20px;
+    overflow-y: scroll;
+  }
+  #readMoreButton {
+    display: none;
+  }
+  .scrollButton {
+    display: none;
+  }
+  #lookingForBox {
+    overflow-y: scroll;
+  }
+  #lookingForTextBottom {
+    font-size: 20px;
+  }
+  #skillLine1 {
+    width: 50%;
+  }
+  #skillsTextTop1 {
+    font-size: 70px;
+  }
+  #skillBox {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0px;
+  }
+  .gridItem {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+  }
+  #skillBox2Top {
+    align-items: end;
+  }
+  #skillBox2Text {
+    height: 75%;
+    width: 90%;
+    font-size: 20px;
+    overflow-y: none;
+  }
+  #skills2items {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .itm2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  #topSocial {
+    font-size: 100px;
+  }
+  #socialLine {
+    width: 85%;
+  }
+  #bottomSocial {
+    font-size: 35px;
+  }
+  #emailtextSocial {
+    display: none;
+  }
+  #clickToCopyText {
+    font-size: 20px;
+  }
+  #emailtextSocialMobile {
+    display: flex;
+    font-size: 25px;
+  }
+  #middleSocial {
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  #socialMiddleAll {
+    gap: 10px;
+  }
+  #boxForSocial {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+  }
+  #topSocial {
+    height: 25%;
+  }
+  #thankYouText {
+    font-size: 70px;
+    text-align: center;
+  }
+  #pageContent {
+    display: none;
+  }
+
+  #welcomePagePortfolio {
+    font-size: 50px;
+  }
+  #goDownButton {
+    display: none;
+  }
+  #portfolioTextBox {
+    height: 90%;
+    width: 80%;
+    font-size: 20px;
+  }
+  #portfolioHeadingBottom {
+    font-size: 75px;
+  }
+  #portfolioHeadingLine {
+    width: 80%;
+  }
+  .iconSize2 {
+    height: 40%;
+    width: 70%;
+  }
+  #portLetter {
+    font-size: 30px;
+  }
+
+  #welcomePageProjects {
+    font-size: 50px;
+  }
+  #projectBoxTop {
+    flex-direction: column;
+  }
+  #leftBoxTop {
+    width: 100%;
+    height: 70%;
+  }
+  #leftBoxTop p {
+    font-size: 20px;
+  }
+  #leftBoxTopLower {
+    display: none;
+  }
+  #rightBoxTop {
+    width: 100%;
+  }
+  #fillElement {
+    height: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+  #aboutMeBox {
+    height: 85%;
+    width: 85%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 30px;
+    word-spacing: 1px;
+  }
+  #aboutMeTopText {
+    justify-content: center;
+  }
+  #aboutMeTextInside {
+    font-size: 20px;
+    overflow-y: scroll;
+  }
+  #readMoreButton {
+    display: none;
+  }
+  .scrollButton {
+    display: none;
+  }
+  #lookingForBox {
+    overflow-y: scroll;
+  }
+  #skillBox2Text {
+    height: 75%;
+    width: 90%;
+    font-size: 20px;
+    overflow-y: none;
+  }
+  #pageContent {
+    display: none;
+  }
+  #emailtextSocialMobile {
+    display: flex;
+    font-size: 25px;
+  }
+  #emailtextSocial {
+    display: none;
+  }
+
+  #welcomePagePortfolio {
+    font-size: 50px;
+  }
+  #goDownButton {
+    display: none;
+  }
+  #portfolioTextBox {
+    height: 90%;
+    width: 80%;
+    font-size: 20px;
+  }
+  #portfolioHeadingBottom {
+    font-size: 75px;
+  }
+  #portfolioHeadingLine {
+    width: 80%;
+  }
+  .iconSize2 {
+    height: 40%;
+    width: 70%;
+  }
+  #portLetter {
+    font-size: 30px;
+  }
+  #leftBoxTop p {
+    font-size: 20px;
+  }
+}
+
+@keyframes underline1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    background: linear-gradient(140deg, #fff, #fff);
+  }
+  100% {
+    background: linear-gradient(140deg, #e7e7e7, #efefef);
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    scale: 1.17;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    scale: 1.17;
+    transform: rotate(180deg);
+  }
+  100% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hideSide {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes sidebarAni {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes sidebarAniPhone {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes sidebarAniClose {
+  0% {
+    width: 20%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes mainLogoSVG {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes mainLogoSVG2 {
+  0% {
+    stroke-dashoffset: 1500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes colorSVg {
+  0% {
+    fill-opacity: 0;
+  }
+  90% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fadeOutLogo {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes colorChangeToPortfolio {
+  0% {
+    background: linear-gradient(210deg, #93bae8, #edadc9, #b8b5db);
+  }
+  100% {
+    background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
+  }
+}

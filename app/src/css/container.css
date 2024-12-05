@@ -1,0 +1,97 @@
+#slideBox {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-size: 150% 150%;
+}
+
+#overlayBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.48);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#elementsBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+#buttonId {
+  color: white;
+  font-size: 5.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: 0.5s all ease-in-out;
+}
+
+#buttonId:hover {
+  letter-spacing: 2.7px;
+  scale: 1.1;
+}
+
+/* class's */
+
+.imageBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  filter: blur(2px);
+  scale: 1.15;
+}
+
+.hoverdImage {
+  filter: blur(7px);
+  scale: 1.5;
+}
+
+.leftImage {
+  filter: blur(2px);
+  scale: 1.15;
+}
+
+.slider-container {
+  height: 100%;
+  width: 100%;
+}
+
+slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+
+.slick-prev {
+  left: 3% !important;
+  z-index: 11;
+}
+
+.slick-next {
+  right: 3% !important;
+  z-index: 11;
+}
+
+.slick-dots {
+  z-index: 100;
+  bottom: 5% !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+}

@@ -1,0 +1,85 @@
+.iconSize {
+  height: 40%;
+  width: 40%;
+}
+
+#leftArrow {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  right: 3%;
+  top: 48%;
+  z-index: 11;
+  fill: #ffffff;
+  rotate: 270deg;
+}
+
+#rightArrow {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  left: 3%;
+  top: 48%;
+  z-index: 11;
+  fill: #ffffff;
+  rotate: 90deg;
+}
+
+@media only screen and (max-width: 767px) {
+  .iconSize {
+    height: 55%;
+    width: 55%;
+  }
+}
+
+.cls-10,
+.cls-20,
+.cls-30 {
+  fill: #fff;
+}
+
+.cls-20 {
+  opacity: 0.18;
+}
+
+.cls-20,
+.cls-30 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+.cls-11,
+.cls-21,
+.cls-31 {
+  fill: #fff;
+}
+
+.cls-41 {
+  fill: none;
+}
+
+.cls-41,
+.cls-21,
+.cls-31 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+.cls-21 {
+  opacity: 0.18;
+}
+
+.cls-111,
+.cls-222 {
+  fill: #fff;
+}
+
+.cls-222 {
+  opacity: 0.18;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+.cls-333 {
+  fill: none;
+}

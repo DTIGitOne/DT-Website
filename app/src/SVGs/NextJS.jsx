@@ -1,4 +1,4 @@
-import '../svg.css';
+import '../css/svg.css';
 
 const NextJsIcon = () => {
     return (

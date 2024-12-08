@@ -1,0 +1,144 @@
+@keyframes underline1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    background: linear-gradient(140deg, #fff, #fff);
+  }
+  100% {
+    background: linear-gradient(140deg, #e7e7e7, #efefef);
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    scale: 1.17;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    scale: 1.17;
+    transform: rotate(180deg);
+  }
+  100% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hideSide {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes sidebarAni {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes sidebarAniPhone {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes sidebarAniClose {
+  0% {
+    width: 20%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes mainLogoSVG {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes mainLogoSVG2 {
+  0% {
+    stroke-dashoffset: 1500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes colorSVg {
+  0% {
+    fill-opacity: 0;
+  }
+  90% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fadeOutLogo {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes colorChangeToPortfolio {
+  0% {
+    background: linear-gradient(210deg, #93bae8, #edadc9, #b8b5db);
+  }
+  100% {
+    background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
+  }
+}

@@ -69,35 +69,9 @@ code {
   transition: opacity 0.7s;
 }
 
-.portfolioDrop {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(240deg, #1eae98, #d8b5ff);
-  background-size: 350% 550%;
-  opacity: 0;
-  transition: opacity 0.7s;
-}
-
-.projectsDrop {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
-  background-size: 100% 100%;
-  opacity: 0;
-  transition: opacity 0.7s;
-}
-
 #wholePage3 {
-  background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
-  background-size: 100% 100%;
+  background: linear-gradient(210deg, #417177, #2a5470, #4c4177);
+  background-size: 150% 150%;
 }
 
 &::-webkit-scrollbar {
@@ -172,17 +146,6 @@ code {
   animation-fill-mode: forwards;
 }
 
-.cls-2 {
-  fill: #ffffff;
-  fill-opacity: 0;
-  stroke: #ffffff;
-  stroke-width: 0.5px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1000;
-  animation: mainLogoSVG 5s ease-in-out, colorSVg 3s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
 #pageElements {
   animation: fadeIn 1.5s ease-in-out;
   opacity: 1;
@@ -191,22 +154,11 @@ code {
 
 .elementHeight {
   height: 100vh;
+  position: relative;
 }
 
 .scrollHeight {
   height: 10vh;
-}
-
-#downIcon {
-  height: 30%;
-  width: auto;
-  fill: white;
-}
-
-#downIcon1 {
-  height: 30%;
-  width: auto;
-  fill: white;
 }
 
 .backdrop {
@@ -223,17 +175,6 @@ code {
 
 .backdrop.closing {
   opacity: 0;
-}
-
-.cls-1 {
-  fill: #fff;
-  fill-opacity: 0;
-  stroke: #fff;
-  stroke-width: 0.5px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1000;
-  animation: mainLogoSVG 5s ease-in-out, colorSVg 3s ease-in-out;
-  animation-fill-mode: forwards;
 }
 
 .sidebarAni {
@@ -257,147 +198,23 @@ code {
   z-index: 50;
 }
 
-#sideBox .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#sideBox .btn button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  background-color: rgba(65, 65, 65, 0.01);
-  padding: 10px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  overflow: hidden;
-  z-index: 1;
-  transition: 0.5s;
-  backdrop-filter: blur(0px);
-  user-select: none;
-}
-
-#sideBox .btn:hover button {
-  letter-spacing: 2px;
-  color: #1a1a1a;
-}
-
-#sideBox .btn button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1%;
-  height: 100%;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1.5), transparent);
-  transform: skewX(0deg) translate(0);
-  transition: 0.5s;
-  filter: blur(5px);
-}
-
-#sideBox .btn:hover button::before {
-  transform: skewX(0deg) translate(400px);
-}
-
-#sideBox .btn::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%);
-  bottom: 50%;
-  width: 0px;
-  height: 0px;
-  border-radius: 10px;
-  transition: 0.1s;
-  transition-delay: 0.5;
-}
-
-#sideBox .btn:hover::before /*redBlack them width 85%*/ {
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-
-#sideBox .btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%);
-  top: 50%;
-  width: 0px;
-  height: 0px;
-  border-radius: 10px;
-  transition: 0.1s;
-  transition-delay: 0.4;
-}
-
-#sideBox .btn:hover::after /*redBlack them width 85%*/ {
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
-#sideBox .btn::before, /*chnage 1*/
-#sideBox .btn::after {
-  background: #f3f3f3;
-  box-shadow: 0 0 7px #f3f3f3, 0 0 7px #f3f3f3, 0 0 7px #f3f3f3, 0 0 7px #f3f3f3;
-}
-
-.sideElementAni:hover .underline1 {
-  animation: underline1 0.5s ease-in-out forwards;
-}
-
-#closeSVG {
-  height: 55%;
-  cursor: pointer;
-}
-
-#close:hover #closeSVG {
-  animation: scale 0.25s ease-in-out forwards;
-}
-
-#close:not(:hover) #closeSVG {
-  animation: scale-out 0.25s ease-in-out forwards;
-}
-
-.cls-3 {
-  fill: #fff;
-}
-
-.closing {
-  animation: sidebarAniClose 0.7s ease-in-out forwards;
-}
-
-.closing2 {
-  animation: fadeOut 0.7s ease-in-out forwards;
-}
-
-.colorChangeToPortfolio {
-  animation: colorChangeToPortfolio 0.7s ease-in-out forwards;
-}
-
 .fade-in {
   animation: fadeIn 1s ease-in;
 }
 
 #aboutMeBox {
-  height: 75%;
-  width: 65%;
+  height: auto;
+  width: 78%;
   border-radius: 60px;
   border: solid white 2px;
   background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   box-sizing: border-box;
-  padding: 12px;
+  padding: 1.5rem;
+  padding-left: 1.2rem;
   font-size: 40px;
   word-spacing: 1px;
   transition: 0.7s;
@@ -408,8 +225,8 @@ code {
 }
 
 #lookingForBox {
-  height: 90%;
-  width: 75%;
+  height: auto;
+  width: 65%;
   border-radius: 60px;
   border: solid white 2px;
   background: rgba(255, 255, 255, 0.1);
@@ -445,16 +262,16 @@ code {
 
 .gridItem {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   font-size: 30px;
-  gap: 6px;
+  gap: 10px;
 }
 
 #skillBox2Top {
-  height: 50%;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -464,13 +281,14 @@ code {
 #skillBox2Text {
   height: 65%;
   width: 75%;
-  border-radius: 60px;
+  border-radius: 45px;
   border: solid white 2px;
   background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
   box-sizing: border-box;
   padding: 28px;
-  padding-top: 38px;
+  padding-top: 2.5rem;
+  padding-bottom: 9.5rem;
   word-spacing: 1px;
 }
 
@@ -496,7 +314,7 @@ code {
 }
 
 .fontSizePages {
-  font-size: 22px;
+  font-size: 1.25rem;
   line-height: 30px;
 }
 
@@ -506,34 +324,6 @@ code {
 
 #elemetsPage2 li {
   margin-bottom: 5px;
-}
-
-#emailtextSocialMobile {
-  display: none;
-}
-
-#portfolioTextBox {
-  height: 75%;
-  width: 75%;
-  border-radius: 60px;
-  border: solid white 2px;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 28px;
-  padding-top: 38px;
-  word-spacing: 1px;
-  font-size: 25px;
-  line-height: 30px;
-}
-
-#portfolioHeadingBottom {
-}
-
-#portfolioHeadingLine {
-  width: 35%;
-  height: 2px;
-  background: radial-gradient(white, transparent);
 }
 
 .iconSize2 {
@@ -618,8 +408,9 @@ code {
     justify-content: center;
   }
   #aboutMeTextInside {
-    font-size: 20px;
+    font-size: 1.1rem;
     overflow-y: scroll;
+    height: 90%;
   }
   #readMoreButton {
     display: none;
@@ -691,15 +482,8 @@ code {
   #bottomSocial {
     font-size: 35px;
   }
-  #emailtextSocial {
-    display: none;
-  }
   #clickToCopyText {
     font-size: 20px;
-  }
-  #emailtextSocialMobile {
-    display: flex;
-    font-size: 25px;
   }
   #middleSocial {
     align-items: center;
@@ -895,15 +679,8 @@ code {
   #bottomSocial {
     font-size: 35px;
   }
-  #emailtextSocial {
-    display: none;
-  }
   #clickToCopyText {
     font-size: 20px;
-  }
-  #emailtextSocialMobile {
-    display: flex;
-    font-size: 25px;
   }
   #middleSocial {
     align-items: center;
@@ -1013,13 +790,6 @@ code {
   #pageContent {
     display: none;
   }
-  #emailtextSocialMobile {
-    display: flex;
-    font-size: 25px;
-  }
-  #emailtextSocial {
-    display: none;
-  }
 
   #welcomePagePortfolio {
     font-size: 50px;
@@ -1047,150 +817,5 @@ code {
   }
   #leftBoxTop p {
     font-size: 20px;
-  }
-}
-
-@keyframes underline1 {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 75%;
-  }
-}
-
-@keyframes buttonHover {
-  0% {
-    background: linear-gradient(140deg, #fff, #fff);
-  }
-  100% {
-    background: linear-gradient(140deg, #e7e7e7, #efefef);
-  }
-}
-
-@keyframes scale {
-  0% {
-    scale: 1;
-    transform: rotate(0deg);
-  }
-  100% {
-    scale: 1.17;
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes scale-out {
-  0% {
-    scale: 1.17;
-    transform: rotate(180deg);
-  }
-  100% {
-    scale: 1;
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes hideSide {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0px;
-  }
-}
-
-@keyframes sidebarAni {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 20%;
-  }
-}
-
-@keyframes sidebarAniPhone {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-@keyframes sidebarAniClose {
-  0% {
-    width: 20%;
-  }
-  100% {
-    width: 0px;
-  }
-}
-
-@keyframes mainLogoSVG {
-  0% {
-    stroke-dashoffset: 1000;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes mainLogoSVG2 {
-  0% {
-    stroke-dashoffset: 1500;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes colorSVg {
-  0% {
-    fill-opacity: 0;
-  }
-  90% {
-    fill-opacity: 0;
-  }
-  100% {
-    fill-opacity: 1;
-  }
-}
-
-@keyframes fadeOutLogo {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes colorChangeToPortfolio {
-  0% {
-    background: linear-gradient(210deg, #93bae8, #edadc9, #b8b5db);
-  }
-  100% {
-    background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
   }
 }

@@ -1,7 +1,4 @@
-.iconSize {
-  height: 40%;
-  width: 40%;
-}
+/* id's */
 
 #leftArrow {
   width: 34px;
@@ -25,11 +22,44 @@
   rotate: 90deg;
 }
 
-@media only screen and (max-width: 767px) {
-  .iconSize {
-    height: 55%;
-    width: 55%;
-  }
+#downIcon {
+  height: 30%;
+  width: auto;
+  fill: white;
+}
+
+#downIcon1 {
+  height: 30%;
+  width: auto;
+  fill: white;
+}
+
+/* class's */
+
+.clsp-1 {
+  fill: #ffffff;
+}
+
+.clsp-1,
+.clsp-2 {
+  stroke-width: 0px;
+}
+
+.clsp-3 {
+  fill: #ffffff;
+  fill-opacity: 0.18;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.75px;
+}
+
+.clsp-2 {
+  fill: #ffffff;
+}
+
+.iconSize {
+  height: 40%;
+  width: 40%;
 }
 
 .cls-10,
@@ -82,4 +112,66 @@
 
 .cls-333 {
   fill: none;
+}
+
+.cls-1111,
+.cls-2222 {
+  fill: #fff;
+  stroke-width: 0px;
+}
+
+.cls-2222 {
+  opacity: 0.18;
+}
+
+.clsb-1,
+.clsb-2,
+.clsb-3 {
+  fill: #fff;
+}
+
+.clsb-1,
+.clsb-3 {
+  stroke-width: 0px;
+}
+
+.clsb-2 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.26px;
+}
+
+.clsb-3 {
+  opacity: 0.18;
+}
+
+/* Logo svg's */
+.cls-2 {
+  fill: #ffffff;
+  fill-opacity: 0;
+  stroke: #ffffff;
+  stroke-width: 0.5px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1000;
+  animation: mainLogoSVG 5s ease-in-out, colorSVg 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.cls-1 {
+  fill: #fff;
+  fill-opacity: 0;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1000;
+  animation: mainLogoSVG 5s ease-in-out, colorSVg 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+/* */
+
+@media only screen and (max-width: 767px) {
+  .iconSize {
+    height: 55%;
+    width: 55%;
+  }
 }

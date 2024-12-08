@@ -5,6 +5,8 @@ import Sidebar from "../Components/Sidebar";
 import { scrollTo } from '../Constants/Constants';
 import { openURLInNewWindow } from '../Constants/Constants';
 import { useNavigate } from "react-router-dom";
+import Arrow from "../SVGs/Arrow";
+import FramerOne from "../Components/animation/FramerOne";
 
 const Portfolio = () => {
    const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -26,10 +28,6 @@ const Portfolio = () => {
    if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-
-    const handleSectionClick = (sectionRef) => {
-      scrollTo(sectionRef);
-   };
 
    const isPortfolioPage = () => {
       const pathname = window.location.pathname;
@@ -58,46 +56,6 @@ const Portfolio = () => {
       }
    };
 
-   const navigate = useNavigate();
-
-   const handleMain = () => {
-      const mainDrop = document.querySelector(".mainDrop");
-      const pageElements = document.getElementById("pageElements");
-  
-      if (window.location.pathname.includes("/Portfolio")) {
-        pageElements.style.opacity = 0;
-      } 
-  
-      if (window.location.pathname.includes("/Projects")) {
-        pageElements.style.opacity = 0;
-      } 
-  
-      mainDrop.style.opacity = 1;
-  
-      setTimeout(() => {
-        navigate("/Main");
-      }, 700);
-    };
-  
-    const handleProjects = () => {
-      const projectsDrop = document.querySelector(".projectsDrop");
-      const pageElements = document.getElementById("pageElements");
-  
-      if (window.location.pathname.includes("/Main")) {
-        pageElements.style.opacity = 0;
-      } 
-  
-      if (window.location.pathname.includes("/Portfolio")) {
-        pageElements.style.opacity = 0;
-      } 
-  
-      projectsDrop.style.opacity = 1;
-  
-      setTimeout(() => {
-        navigate("/Projects");
-      }, 700);
-    };
-
    return (
       <div id="wholePage2" className=" h-full w-full z-30">
           <div id='mediaForPotrait'><Rotatephoneicon /></div>
@@ -119,39 +77,33 @@ const Portfolio = () => {
                   <div className=' elementHeight w-full flex justify-center items-center select-none'>My Portfolio</div>
                   <div className=' scrollHeight w-full flex justify-center'>
                       <button id="goDownButton" onClick={() => scrollTo(section2)} className='flex flex-col gap-2 p-1 items-center select-none'>
-                         <span className=' text-3xl'>more info</span>
-                         <svg id='downIcon' xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path id='iconClick' fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>
+                         <Arrow />
                       </button>
                   </div>
                </div>
-                    
+
+               {/* portfolio link section */}    
                <div ref={section2} id="aboutMe" className="full-screen-section flex flex-col font-thin text-white text-8xl z-30">
-               <div className=' h-28 w-full'></div>
                   <div className=' elementHeight w-full flex justify-center items-center select-none flex flex-col'>
-                     <div className=" h-1/2 w-full flex justify-center items-center">
-                        <div id="portfolioTextBox">
-                          <span id="portLetter" className=" text-5xl font-light">I</span>nside my portfolio, I've compiled a file that tracks my progress from the inception of my programming journey to the latest project uploaded onto my portfolio. Not all projects showcased here are completed to 100%, 
-                          and I deliberately refrained from revisiting them, despite knowing how to do so. 
-                          I chose to leave them in their current state to document my progression throughout my learning process.
-                           Within this file, I've included a link to my GitHub repository, where all my projects are stored and organized chronologically. 
-                           I opted not to add the projects directly to this website for the sake of accessibility and readability. 
-                           This decision ensures that visitors can easily navigate and view my projects without spending excessive time searching through them.
-                        </div>
-                     </div>
                      <div className=" h-1/2 w-full flex flex-col justify-center items-center">
                         <span id="PortTextBox" className=" w-full h-1/2 flex flex-col items-center justify-center gap-2">
-                           <div id="portfolioHeadingBottom">Portfolio</div>
+                           <FramerOne del={0.2} dur={0.4} classes="flex justify-center items-center" position={"relative"} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
+                              <div id="portfolioHeadingBottom">Portfolio</div>
+                           </FramerOne>
                            <div id="portfolioHeadingLine"></div>
                         </span>
-                        <span className=" w-full h-1/2 flex flex-col items-center justify-start text-4xl">
-                           <span className=" w-auto h-auto flex flex-col items-center gap-3 cursor-pointer" onClick={() => openURLInNewWindow("https://github.com/stars/DTIGitOne/lists/my-works")}>
-                             <Githubicon2 />
-                             Portfolio
+                        <FramerOne del={0.2} dur={0.4} classes="flex justify-center items-center" position={"relative"} height='100%' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
+                           <span className=" w-full h-1/2 flex flex-col items-center justify-start text-4xl">
+                              <span className=" w-auto h-auto flex flex-col items-center gap-3 cursor-pointer" onClick={() => openURLInNewWindow("https://github.com/stars/DTIGitOne/lists/portfolio")}>
+                                <Githubicon2 />
+                                Portfolio
+                              </span>
                            </span>
-                        </span>
+                        </FramerOne>
                      </div>
                   </div>
-               </div>s
+               </div>
+               {/*  */}
 
             </div>
          </div>

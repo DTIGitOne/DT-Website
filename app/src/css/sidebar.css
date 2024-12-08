@@ -1,0 +1,120 @@
+#sideBox .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sideBox .btn button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: rgba(65, 65, 65, 0.01);
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(0px);
+  user-select: none;
+}
+
+#sideBox .btn:hover button {
+  letter-spacing: 2px;
+  color: #1a1a1a;
+}
+
+#sideBox .btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1.5), transparent);
+  transform: skewX(0deg) translate(0);
+  transition: 0.5s;
+  filter: blur(5px);
+}
+
+#sideBox .btn:hover button::before {
+  transform: skewX(0deg) translate(400px);
+}
+
+#sideBox .btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 50%;
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  transition: 0.1s;
+  transition-delay: 0.5;
+}
+
+#sideBox .btn:hover::before /*redBlack them width 85%*/ {
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#sideBox .btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: 50%;
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  transition: 0.1s;
+  transition-delay: 0.4;
+}
+
+#sideBox .btn:hover::after /*redBlack them width 85%*/ {
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#sideBox .btn::before, /*chnage 1*/
+  #sideBox .btn::after {
+  background: #f3f3f3;
+  box-shadow: 0 0 7px #f3f3f3, 0 0 7px #f3f3f3, 0 0 7px #f3f3f3, 0 0 7px #f3f3f3;
+}
+
+.sideElementAni:hover .underline1 {
+  animation: underline1 0.5s ease-in-out forwards;
+}
+
+#closeSVG {
+  height: 55%;
+  cursor: pointer;
+}
+
+#close:hover #closeSVG {
+  animation: scale 0.25s ease-in-out forwards;
+}
+
+#close:not(:hover) #closeSVG {
+  animation: scale-out 0.25s ease-in-out forwards;
+}
+
+.cls-3 {
+  fill: #fff;
+}
+
+.closing {
+  animation: sidebarAniClose 0.7s ease-in-out forwards;
+}
+
+.closing2 {
+  animation: fadeOut 0.7s ease-in-out forwards;
+}

@@ -61,7 +61,7 @@
     width: 0px;
   }
   100% {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -140,5 +140,17 @@
   }
   100% {
     background: linear-gradient(210deg, #4c4177, #2a5470, #4c4177);
+  }
+}
+
+/* phone animation */
+@media only screen and (max-width: 767px) {
+  @keyframes sidebarAniClose {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0px;
+    }
   }
 }

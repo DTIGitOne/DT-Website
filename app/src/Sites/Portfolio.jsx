@@ -84,24 +84,29 @@ const Portfolio = () => {
 
                {/* portfolio link section */}    
                <div ref={section2} id="aboutMe" className="full-screen-section flex flex-col font-thin text-white text-8xl z-30">
+
                   <div className=' elementHeight w-full flex justify-center items-center select-none flex flex-col'>
                      <div className=" h-1/2 w-full flex flex-col justify-center items-center">
+
                         <span id="PortTextBox" className=" w-full h-1/2 flex flex-col items-center justify-center gap-2">
                            <FramerOne del={0.2} dur={0.4} classes="flex justify-center items-center" position={"relative"} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
                               <div id="portfolioHeadingBottom">Portfolio</div>
                            </FramerOne>
                            <div id="portfolioHeadingLine"></div>
                         </span>
+
                         <FramerOne del={0.2} dur={0.4} classes="flex justify-center items-center" position={"relative"} height='100%' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
-                           <span className=" w-full h-1/2 flex flex-col items-center justify-start text-4xl">
+                           <span id="textPortfolio" className=" w-full h-1/2 flex flex-col items-center justify-start text-4xl">
                               <span className=" w-auto h-auto flex flex-col items-center gap-3 cursor-pointer" onClick={() => openURLInNewWindow("https://github.com/stars/DTIGitOne/lists/portfolio")}>
                                 <Githubicon2 />
                                 Portfolio
                               </span>
                            </span>
                         </FramerOne>
+
                      </div>
                   </div>
+
                </div>
                {/*  */}
 

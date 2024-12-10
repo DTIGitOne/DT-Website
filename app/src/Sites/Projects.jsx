@@ -5,6 +5,7 @@ import { scrollTo } from '../Constants/Constants';
 import CaraouselMenu from '../Components/CaraouselMenu';
 import FramerOne from "../Components/animation/FramerOne";
 import Arrow from "../SVGs/Arrow";
+import ScrollDown from "../Components/smallComponents/ScrollDown";
 
 const Projects = () => {
    const [sidebarOpen, setSidebarOpen] = useState(false); // sidebar state
@@ -89,12 +90,11 @@ const Projects = () => {
                
                {/* Project Landing page */}
                <div ref={section1} id="welcomePageProjects" className="full-screen-section flex flex-col font-thin text-white text-8xl z-30">
+
                   <div className=' elementHeight w-full flex justify-center items-center select-none'>Projects</div>
-                  <div className=' scrollHeight w-full flex justify-center'>
-                      <button id="goDownButton" onClick={() => scrollTo(section2)} className='flex flex-col gap-2 p-1 items-center select-none'>
-                        <Arrow />
-                      </button>
-                  </div>
+
+                  <ScrollDown section={section2} />
+
                </div>
                {/* */}
                

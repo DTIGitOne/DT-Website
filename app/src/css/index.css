@@ -80,7 +80,6 @@ code {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: white;
   border-radius: 15px;
 }
 
@@ -204,11 +203,12 @@ code {
 
 #aboutMeBox {
   height: auto;
+  max-height: 80%;
+  overflow-y: auto;
   width: 78%;
   border-radius: 60px;
   border: solid white 2px;
   background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -220,8 +220,20 @@ code {
   transition: 0.7s;
 }
 
+#aboutMeTextInside {
+  overflow-y: auto;
+}
+
 #aboutMeTextInside::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
+}
+
+#lookingForBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+#skillBox2Text::-webkit-scrollbar {
+  width: 6px;
 }
 
 #lookingForBox {
@@ -235,6 +247,8 @@ code {
   padding: 28px;
   padding-top: 38px;
   word-spacing: 1px;
+  font-size: 1.5rem;
+  line-height: 30px;
 }
 
 #skillTextBox {
@@ -313,6 +327,10 @@ code {
   background: radial-gradient(white, transparent);
 }
 
+#emailtextSocial {
+  font-size: 1.875rem;
+}
+
 .fontSizePages {
   font-size: 1.25rem;
   line-height: 30px;
@@ -377,12 +395,23 @@ code {
   object-fit: cover;
 }
 
+#boxForSocial {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 @media only screen and (max-width: 767px) {
   #sidebar {
-    width: 50%;
+    width: 100%;
   }
   #sideBox {
     font-size: 40px;
+  }
+  #sideBox .btn {
+    width: auto !important;
+  }
+  #sideBox .btn button {
+    width: auto !important;
   }
   .sidebarAni {
     z-index: 110;
@@ -396,9 +425,14 @@ code {
   #downIcon {
     height: 60%;
   }
+  #boxForSocial {
+    font-size: 1.65rem;
+    line-height: 2.25rem;
+  }
   #aboutMeBox {
-    height: 85%;
-    width: 85%;
+    max-height: 70%;
+    border-radius: 15px;
+    width: 88%;
     box-sizing: border-box;
     padding: 12px;
     font-size: 30px;
@@ -421,18 +455,27 @@ code {
   #lookingForTextTop {
     font-size: 34px;
   }
+  #emailtextSocial {
+    font-size: 1.5rem;
+  }
   #lookingForBox {
-    height: 90%;
-    width: 100%;
+    min-height: 40%;
+    max-height: 60%;
+    height: auto;
+    width: 92%;
     border-radius: 35px;
-    overflow-y: scroll;
-    padding: 28px;
-    padding-top: 38px;
-    padding-bottom: 36px;
+    overflow-y: auto;
+    padding: 20px;
+    padding-top: 32px;
+    padding-bottom: 48px;
     word-spacing: 1px;
+    border-radius: 10px;
   }
   #lookingForTextBottom {
-    font-size: 20px;
+    font-size: 1.3rem;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+    padding-bottom: 20px;
   }
   #skillLine1 {
     width: 80%;
@@ -442,7 +485,7 @@ code {
   }
   #skillBox {
     grid-template-columns: repeat(4, 1fr);
-    padding: 0px;
+    padding: 0.3rem;
   }
   .gridItem {
     width: 80%;
@@ -460,6 +503,8 @@ code {
     height: 75%;
     width: 90%;
     font-size: 20px;
+    padding-bottom: 2rem;
+    border-radius: 20px;
     overflow-y: scroll;
   }
   #skills2items {
@@ -503,7 +548,7 @@ code {
     height: 25%;
   }
   #thankYouText {
-    font-size: 50px;
+    font-size: 3.1rem;
     text-align: center;
   }
   #pageContent {
@@ -526,14 +571,17 @@ code {
     height: 30%;
   }
   #portfolioHeadingBottom {
-    font-size: 60px;
+    font-size: 3.9rem;
   }
   #portfolioHeadingLine {
-    width: 80%;
+    width: 100%;
+  }
+  #textPortfolio {
+    font-size: 2.4rem;
   }
   .iconSize2 {
-    height: 40%;
-    width: 60%;
+    height: 37%;
+    width: 57%;
   }
   #portLetter {
     font-size: 30px;

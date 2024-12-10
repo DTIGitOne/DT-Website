@@ -63,10 +63,10 @@ export const Skills = [
     {element: <JSicon />, titleText: "JavaScript"},
     {element: <Reacticon />, titleText: "ReactJS"},
     {element: <Jqueryicon />, titleText: "JQuery"},
-    {element: <Tailwindicon />, titleText: "Tailwind CSS"},
+    {element: <Tailwindicon />, titleText: "Tailwind"},
     {element: <Sassicon />, titleText: "SASS"},
     {element: <NodeJsIcon />, titleText: "Node.JS"},
-    {element: <TypeScriptIcon />, titleText: "TypeScript"},
     {element: <NextJsIcon />, titleText: "Next.JS"},
+    {element: <TypeScriptIcon />, titleText: "TypeScript"},
     {element: <Python />, titleText: "Python"},
 ]

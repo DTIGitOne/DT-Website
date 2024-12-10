@@ -171,8 +171,8 @@ const Main = () => {
                <div ref={section2} id="aboutMe" className="full-screen-section flex flex-col font-thin text-white text-8xl z-30">
                   <div className='  elementHeight w-full flex flex-col justify-center items-center select-none'>
 
-                     <FramerOne del={0.1} dur={0.75} height='auto' classes="flex justify-center items-center" classes2="flex justify-center items-center" var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
                      <div id='aboutMeBox'>
+                     <FramerOne del={0.05} dur={0.75} height='100%' classes="flex justify-start items-center" classes2="flex justify-center items-start flex-col" var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
 
                         <div id='aboutMeTopText' className=' h-auto flex items-center p-4 font-normal'>About me</div>
 
@@ -191,8 +191,8 @@ const Main = () => {
                            My immediate goal is to join a company that recognizes my potential in programming and values my work ethic and dedication.
                         </div>
 
-                     </div>
                      </FramerOne>
+                     </div>
 
                      {/* down arrow to scroll to next element */}
                      <ScrollDown section={section3} />
@@ -204,14 +204,14 @@ const Main = () => {
                <div ref={section3} id="lookingFor" className="full-screen-section relative flex flex-col font-thin text-white text-8xl z-30">
 
                   <div className='elementHeight w-full flex justify-center items-center select-none'>
-                  <FramerOne del={0.4} dur={0.75} height='auto' classes="flex justify-center items-center" classes2="flex justify-center items-center" var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
                      <div className=' h-full w-full flex justify-center items-center flex-col gap-7'>
+                        <FramerOne del={0.05} dur={0.75} height='100%' classes="flex justify-center items-center flex-col" classes2="flex justify-center items-center flex-col gap-6" var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
 
                         <div id='lookingForTextTop' className=' text-6xl'>What i am looking for</div>
 
-                        <div id='lookingForBox' className=' fontSizePages font-light flex flex-col overflow-hidden'>
+                        <div id='lookingForBox' className='font-light flex flex-col overflow-hidden'>
                            <span id='lookingForTextBottom' className=' h-full'>
-                             <span className=' font-medium text-3xl'>-A</span>
+                             <span className=' font-medium'>-A</span>
                              s mentioned earlier, I am seeking a company that acknowledges my programming potential and appreciates my work ethic and dedication. I am not pursuing extravagant benefits or an unrealistic salary for a junior programmer. At present, I am content with the opportunity to work alongside industrious and knowledgeable individuals in the field, from whom I can learn and grow.
                              <br/>
                              <br/>
@@ -219,8 +219,8 @@ const Main = () => {
                            </span>
                         </div>
 
+                        </FramerOne>
                      </div>
-                  </FramerOne>
                   </div>
                
                   {/* down arrow to scroll to next element */}
@@ -238,10 +238,10 @@ const Main = () => {
 
                      {/* Skill's title */}
                      <span id='skillTextBox'>
-                        <FramerOne del={0.6} dur={0.75} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
+                        <FramerOne del={0.1} dur={0.75} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
                            <div id='skillsTextTop1' className=' text-8xl pl-4'>Skills</div>
                         </FramerOne>
-                        <FramerOne del={0.8} dur={0.75} height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} width='100%'>
+                        <FramerOne del={0.2} dur={0.75} height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} width='100%'>
                            <div id='skillLine1'></div>
                         </FramerOne>
                      </span>
@@ -266,22 +266,24 @@ const Main = () => {
                <div ref={section5} id="skills2" className="full-screen-section relative flex flex-col font-thin text-white text-8xl z-30">
 
                {/* filler element for menu top */}
-               <div className=' h-28 w-full'></div>
 
                   <div className='  elementHeight w-full flex justify-center items-center select-none flex-col text-2xl'>
-                  <FramerOne del={0.25} dur={0.75} height='100%' classes="flex justify-center flex-col items-center" classes2="flex justify-center flex-col items-center" var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
 
                      {/* skill's 2 text box */}
                      <div id='skillBox2Top'>
+                        <FramerOne del={0.05} dur={0.75} height='100%' classes="flex justify-center flex-col items-center" classes2="flex justify-end flex-col items-center" var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
                         <div id='skillBox2Text' className=' select-text font-light'>
                           <span className=' font-normal text-4xl'>B</span>esides the skills i have in Frontend devlopment i am also skilled in a  variety of programs used to design  and   sketch out projects and videos used  for development. I have named all of the programs i am  comftarble with  
                           using  but if it is needed i dont think that  there would be a problem for me to  start using  any other program aswell.
                         </div>
+                        </FramerOne>
                      </div>
 
                      {/* hard coded second skill's */}
                      <div id='skillBox2Bottom'>
+                     <FramerOne del={0.05} dur={0.75} height='100%' classes="flex justify-center items-center" classes2="flex justify-center items-center w-full" var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
                         <div id='skills2items'>
+
                            <div className=' h-full w-full itm2'>
                             <div className='gridItem justify-center text-center'>
                              <Illustratoricon />
@@ -289,30 +291,31 @@ const Main = () => {
                             </div>
                            </div>
             
-                         <div className=' h-full w-full itm2'>
-                          <div className='gridItem justify-center text-center'>
-                           <Premiericon />
-                           <span className=' h-1/5'>Adobe <br /> Premier</span>
-                          </div>
-                         </div>
+                           <div className=' h-full w-full itm2'>
+                            <div className='gridItem justify-center text-center'>
+                             <Premiericon />
+                             <span className=' h-1/5'>Adobe <br /> Premier</span>
+                            </div>
+                           </div>
                      
-                         <div className=' h-full w-full itm2'>
-                          <div className='gridItem justify-center text-center'>
-                           <Blender />
-                           <span className=' h-1/5'>Blender</span>
-                          </div>
-                         </div>
+                           <div className=' h-full w-full itm2'>
+                            <div className='gridItem justify-center text-center'>
+                             <Blender />
+                             <span className=' h-1/5'>Blender</span>
+                              </div>
+                           </div>
                          
-                         <div className=' h-full w-full itm2'>
-                          <div className='gridItem justify-center text-center'>
-                           <Figmaicon />
-                           <span className=' h-1/5'>Figma</span>
-                          </div>
-                         </div>
+                           <div className=' h-full w-full itm2'>
+                            <div className='gridItem justify-center text-center'>
+                             <Figmaicon />
+                             <span className=' h-1/5'>Figma</span>
+                              </div>
+                           </div>
+                         
                         </div>
+                        </FramerOne>
                      </div>
 
-                  </FramerOne>
                   </div>
                   {/* down arrow to scroll to next element */}
                   <ScrollDown section={section6} />
@@ -330,7 +333,7 @@ const Main = () => {
                      {/* social top text */}
                      <div id='topSocial' className=' w-full flex justify-center items-center flex-col gap-2'>
 
-                        <FramerOne del={0.15} dur={0.75} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
+                        <FramerOne del={0.05} dur={0.75} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
                            <span>Social Links</span>
                         </FramerOne>
 
@@ -340,9 +343,9 @@ const Main = () => {
 
                      {/* hard coded social links */}
                      <div id='middleSocial' className=' w-full h-1/3 flex justify-center'>
-                        <FramerOne del={0.3} dur={0.9} classes="flex justify-center items-center" classes2="flex justify-center items-center" height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
+                        <FramerOne del={0.2} dur={0.85} classes="flex justify-center items-center" classes2="flex justify-center items-center" height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
 
-                        <div id='boxForSocial' className='w-full h-full flex justify-around items-center text-3xl text-center'>
+                        <div id='boxForSocial' className='w-full h-full flex justify-around items-center text-center'>
 
                           <span className=' flex justify-center items-center flex-col gap-2' onClick={() => openURLInNewWindow("https://www.linkedin.com/in/damir-taljanovic-2813b02ab/")}>
                            <Linkdinicon />
@@ -371,11 +374,11 @@ const Main = () => {
 
                      {/* contact information element section */}
                      <div id='bottomSocial' className=' w-full h-1/3 flex justify-start items-center flex-col text-5xl font-thin gap-3'>
-                       <FramerOne del={0.5} dur={1} classes="flex justify-start flex-col items-center" classes2="flex justify-start flex-col items-center gap-3" height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
+                       <FramerOne del={0.3} dur={0.8} classes="flex justify-start flex-col items-center" classes2="flex justify-start flex-col items-center gap-3" height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='100%'>
 
                        Contact Mail:
 
-                        <span id='emailtextSocial' className=' flex flex-col items-center text-3xl font-normal gap-1 cursor-pointer select-text' onClick={() => window.location.href = `mailto:${gmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}>
+                        <span id='emailtextSocial' className=' flex flex-col items-center font-normal gap-1 cursor-pointer select-text' onClick={() => window.location.href = `mailto:${gmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}>
                            dammirtaljanovic@gmail.com
                         </span>
 
@@ -398,7 +401,7 @@ const Main = () => {
 
                      {/* last section title */}
                      <div id='thankYouText' className=' w-full h-1/3 flex justify-center items-center flex-col gap-3'>
-                        <FramerOne del={0.3} dur={1} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
+                        <FramerOne del={0.05} dur={1} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
                            <span>Thank you for visiting</span>
                         </FramerOne>
                         <div id='socialLine'></div>
@@ -406,15 +409,15 @@ const Main = () => {
 
                      {/* redirection section */}
                      <div className=' w-full h-2/3 flex flex-col items-center font-thin text-5xl gap-10'>
-                        <FramerOne del={0.5} dur={1} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
+                        <FramerOne del={0.15} dur={1} height='auto' var1={{opacity: 0, y: -75}} var2={{opacity: 1,y: 0}} width='fit-content'>
                            Also check out:
                         </FramerOne>
                         <span className=' text-4xl flex justify-center items-center flex-col gap-4'>
-                           <FramerOne del={0.6} dur={1} height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} width='fit-content'>
+                           <FramerOne del={0.35} dur={0.7} height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} width='fit-content'>
                               <div className=' font-light cursor-pointer' onClick={handlePortfolio}>My Portfolio</div>
                            </FramerOne>
                            &
-                           <FramerOne del={0.7} dur={1} height='auto' var1={{opacity: 0, x: 75}} var2={{opacity: 1,x: 0}} width='fit-content'>
+                           <FramerOne del={0.55} dur={0.7} height='auto' var1={{opacity: 0, x: 75}} var2={{opacity: 1,x: 0}} width='fit-content'>
                               <div className=' font-light cursor-pointer' onClick={handleProjects}>My Projects</div>
                            </FramerOne>
                         </span>

@@ -95,3 +95,23 @@ slick-prev,
 .slick-dots li button:before {
   color: white !important;
 }
+
+@media only screen and (max-width: 767px) {
+  #buttonId {
+    font-size: 2.5rem;
+    line-height: 45px;
+    text-align: center;
+    max-width: 90%;
+  }
+  #overlayBox {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .imageBackground {
+    width: 180% !important;
+    height: 120%;
+    scale: 2;
+  }
+  .slick-dots {
+    bottom: 9% !important;
+  }
+}

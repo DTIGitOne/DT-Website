@@ -309,6 +309,7 @@ code {
 #skillBox2Bottom {
   height: 50%;
   width: 100%;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
